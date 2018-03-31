@@ -2,8 +2,10 @@
 
 ---
 
-Changes: \* Copy from default
+Changes:
+
+*   Copy from default
 
 ---
 
-![Image](on_my_way.png)
+[on_my_way.png](on_my_way.png)
