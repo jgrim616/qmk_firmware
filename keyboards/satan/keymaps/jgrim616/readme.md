@@ -8,4 +8,4 @@ Changes:
 
 ---
 
-[on_my_way.png](on_my_way.png)
+![on_my_way.png](on_my_way.png)
