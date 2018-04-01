@@ -24,13 +24,12 @@ TODO:
     *   VIM Up/Down/Left/Right - s
     *   VIM Skip word Left/Right - d
     *   VIM Home/End/PgUp/PgDn - f
-*   Make sure Home/End work on the same line instead of document
-*   Test if Sleep works for both Windows and Mac
+        *   Make sure Home/End work on the same line instead of document
 *   Confirm MouseKeys works on both Windows and Mac
 *   Things to Include:
     *   MouseKeys
     *   Media Keys
-        *   Sleep
+        *   Sleep (KC_SLEP - Windows, KC_PWR - Mac)
         *   Volume Up/Down/Mute
         *   Brightness Up/Down
     *   Keyboard Backlighting
