@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______,_______,_______,_______,_______,_______,KC_CALC,_______,KC_INS, _______,KC_PSCR,KC_SLCK,KC_PAUS,KC_PWR, \
   _______,_______,_______,_______,_______,_______,KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_HOME,KC_PGUP,_______, \
   _______,_______,KC_MENU,BL_DEC, BL_TOGG,BL_INC, KC_VOLD,KC_VOLU,KC_MUTE,KC_END, KC_PGDN,_______, \
-  _______,RESET,  _______,                _______,                        _______,_______,TO(_WBL),TO(_MBL) ),
+  _______,_______,  _______,                _______,                        _______,_______,TO(_WBL),TO(_MBL) ),
   #endif
 
   /* Keymap _WFL: Windows Function Layer
@@ -111,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______,_______,_______,_______,_______,_______,KC_CALC,_______,KC_INS, _______,KC_PSCR,KC_SLCK,KC_PAUS,KC_SLEP, \
   _______,_______,_______,_______,_______,_______,KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_HOME,KC_PGUP,_______, \
   _______,_______,KC_MENU,BL_DEC, BL_TOGG,BL_INC, KC_VOLD,KC_VOLU,KC_MUTE,KC_END, KC_PGDN,_______, \
-  _______,RESET,  _______,                _______,                        _______,_______,TO(_WBL),TO(_MBL) ),
+  _______,_______,  _______,                _______,                        _______,_______,TO(_WBL),TO(_MBL) ),
   #endif
 };
 
