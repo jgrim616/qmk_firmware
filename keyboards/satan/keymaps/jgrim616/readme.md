@@ -28,11 +28,6 @@ TODO:
 *   Confirm MouseKeys works on both Windows and Mac
 *   Things to Include:
     *   MouseKeys
-    *   Media Keys
-        *   Sleep (KC_SLEP - Windows, KC_PWR - Mac)
-        *   Volume Up/Down/Mute
-        *   Brightness Up/Down
-    *   Keyboard Backlighting
 
 ---
 
