@@ -28,7 +28,6 @@ TODO:
 *   Confirm MouseKeys works on both Windows and Mac
 *   Things to Include:
     *   MouseKeys
-    *   Implement all of Karabiner functionality
 
 ---
 

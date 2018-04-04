@@ -6,6 +6,7 @@
 #define FN_M_S LT(_MFL, KC_S)
 #define FN_W_S LT(_WFL, KC_S)
 
+
 // Each layer gets a name for readability, which is then used in the keymap matrix below.
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
@@ -67,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |-----------------------------------------------------------|
    * |     |   |   |   |   |   |Cal|   |Ins|   |Prt|Scr|Pau|SLEEP|
    * |-----------------------------------------------------------|
-   * |      |   |   |   |AML|   |Lt |Dn |Up |Rt |   |   |        |
+   * |      |   |   |Alt|AML|   |Lt |Dn |Up |Rt |   |   |        |
    * |-----------------------------------------------------------|
    * |        |   |Cxt|BL-|BLT|BL+|Vo-|Vo+|Mut|   |   |          |
    * |-----------------------------------------------------------|
@@ -84,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   #else
   KC_GRV, KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_F7,  KC_F8,  KC_F9,  KC_F10, KC_F11, KC_F12, KC_DEL,  \
   _______,_______,_______,_______,_______,_______,KC_CALC,_______,KC_INS, _______,KC_PSCR,KC_SLCK,KC_PAUS,KC_PWR, \
-  _______,_______,_______,_______,MO(_AML),_______,KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,_______,_______,_______, \
+  _______,_______,_______,KC_LALT,MO(_AML),_______,KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,_______,_______,_______, \
   _______,_______,KC_MENU,BL_DEC, BL_TOGG,BL_INC, KC_VOLD,KC_VOLU,KC_MUTE,_______,_______,_______, \
   _______,_______,_______,                _______,                        _______,_______,TO(_WBL),TO(_MBL) ),
   #endif
@@ -95,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |-----------------------------------------------------------|
    * |     |   |   |   |   |   |Cal|   |Ins|   |Prt|Scr|Pau|SLEEP|
    * |-----------------------------------------------------------|
-   * |      |   |   |   |AML|   |Lt |Dn |Up |Rt |Hme|PgU|        |
+   * |      |   |   |Ctr|AML|   |Lt |Dn |Up |Rt |Hme|PgU|        |
    * |-----------------------------------------------------------|
    * |        |   |Cxt|BL-|BLT|BL+|Vo-|Vo+|Mut|End|PgD|          |
    * |-----------------------------------------------------------|
@@ -112,7 +113,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   #else
   KC_GRV, KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_F7,  KC_F8,  KC_F9,  KC_F10, KC_F11, KC_F12, KC_DEL,  \
   _______,_______,_______,_______,_______,_______,KC_CALC,_______,KC_INS, _______,KC_PSCR,KC_SLCK,KC_PAUS,KC_SLEP, \
-  _______,_______,_______,_______,MO(_AML),_______,KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_HOME,KC_PGUP,_______, \
+  _______,_______,_______,KC_LCTL,MO(_AML),_______,KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,KC_HOME,KC_PGUP,_______, \
   _______,_______,KC_MENU,BL_DEC, BL_TOGG,BL_INC, KC_VOLD,KC_VOLU,KC_MUTE,KC_END, KC_PGDN,_______, \
   _______,_______,_______,                _______,                        _______,_______,TO(_WBL),TO(_MBL) ),
   #endif
