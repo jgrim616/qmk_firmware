@@ -3,8 +3,10 @@
 
 // Used for SHIFT_ESC
 #define MODS_CTRL_MASK  (MOD_BIT(KC_LSHIFT)|MOD_BIT(KC_RSHIFT))
-#define FN_M_S LT(_MFL, KC_S)
-#define FN_W_S LT(_WFL, KC_S)
+#define LT_M_S LT(_MFL, KC_S)
+#define LT_W_S LT(_WFL, KC_S)
+#define LT_Mo_W LT(_ML, KC_W)
+#define LT_Mo_Sp LT(_ML, KC_SPC)
 
 
 // Each layer gets a name for readability, which is then used in the keymap matrix below.
@@ -16,7 +18,7 @@
 #define _MFL 2 // Mac Funtion Layer
 #define _WFL 3 // Windows Function Layer
 #define _AML 4 // Additional Movement Layer
-//#define _ML  5 // Mouse Layer
+#define _ML  5 // Mouse Layer
 
 
 #define _______ KC_TRNS
@@ -26,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,-----------------------------------------------------------.
    * |Esc~| 1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|Backsp |
    * |-----------------------------------------------------------|
-   * |Tab  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|  \  |
+   * |Tab  |  Q|M/W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|  \  |
    * |-----------------------------------------------------------|
    * |Ctrl   |  A|F/S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|Return |
    * |-----------------------------------------------------------|
@@ -37,16 +39,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
 [_MBL] = KEYMAP_ANSI(
   F(0),    KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   KC_6,   KC_7,   KC_8,   KC_9,   KC_0,   KC_MINS, KC_EQL, KC_BSPC, \
-  KC_TAB,  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_LBRC, KC_RBRC,KC_BSLS, \
-  KC_LCTL, KC_A, FN_M_S,   KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,KC_QUOT,         KC_ENT,  \
+  KC_TAB,  KC_Q,LT_Mo_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_LBRC, KC_RBRC,KC_BSLS, \
+  KC_LCTL, KC_A, LT_M_S,   KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,KC_QUOT,          KC_ENT, \
   KC_LSFT,         KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,         KC_RSFT, \
-  KC_LCTL, KC_LALT,KC_LGUI,                KC_SPC,                                 KC_RGUI,MO(_MFL),KC_RALT,KC_RCTL),
+  KC_LCTL, KC_LALT,KC_LGUI,                LT_Mo_Sp,                                KC_RGUI,MO(_MFL),KC_RALT,KC_RCTL),
 
   /* Keymap _WBL: (Windows Base Layer)
    * ,-----------------------------------------------------------.
    * |Esc~| 1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|Backsp |
    * |-----------------------------------------------------------|
-   * |Tab  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|  \  |
+   * |Tab  |  Q|M/W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|  \  |
    * |-----------------------------------------------------------|
    * |Ctrl   |  A|F/S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|Return |
    * |-----------------------------------------------------------|
@@ -57,10 +59,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
 [_WBL] = KEYMAP_ANSI(
   F(0),    KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   KC_6,   KC_7,   KC_8,   KC_9,   KC_0,   KC_MINS, KC_EQL, KC_BSPC, \
-  KC_TAB,  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_LBRC, KC_RBRC,KC_BSLS, \
-  KC_LCTL, KC_A, FN_W_S,   KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,KC_QUOT,         KC_ENT,  \
+  KC_TAB,  KC_Q,LT_Mo_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_LBRC, KC_RBRC,KC_BSLS, \
+  KC_LCTL, KC_A, LT_W_S,   KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,KC_QUOT,          KC_ENT, \
   KC_LSFT,         KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,         KC_RSFT, \
-  KC_LCTL, KC_LGUI,KC_LALT,                KC_SPC,                                 KC_RALT,MO(_WFL),KC_RGUI,KC_RCTL),
+  KC_LCTL, KC_LGUI,KC_LALT,                LT_Mo_Sp,                                KC_RALT,MO(_WFL),KC_RGUI,KC_RCTL),
 
   /* Keymap _MFL: Mac Function Layer
    * ,-----------------------------------------------------------.
@@ -137,6 +139,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______,_______,_______,_______,_______,_______,KC_HOME,KC_PGDN,KC_PGUP,KC_END, _______,_______,_______, \
   _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______, \
   _______,_______,_______,                _______,                        _______,_______,_______,_______ ),
+
+  /* Keymap _ML: Mouse Layer
+   * ,-----------------------------------------------------------.
+   * |   |   |   |   |   |   |   |   |   |   |   |   |   |       |
+   * |-----------------------------------------------------------|
+   * |     |   |   |   |   |   |ScU|   |MUp|Bt1|Bt2|Bt3|   |     |
+   * |-----------------------------------------------------------|
+   * |      |   |   |   |   |   |ScD|MRt|MDn|MLt|   |   |        |
+   * |-----------------------------------------------------------|
+   * |        |   |   |   |   |   |ScL|ScR|   |   |   |          |
+   * |-----------------------------------------------------------|
+   * |    |    |    |                        |    |    |    |    |
+   * `-----------------------------------------------------------'
+   */
+[_ML] = KEYMAP_ANSI(
+  _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,  \
+  _______,_______,_______,_______,_______,_______,KC_WH_U,_______,KC_MS_U,KC_BTN1,KC_BTN2,KC_BTN3,_______,_______, \
+  _______,_______,_______,_______,_______,_______,KC_WH_D,KC_MS_L,KC_MS_D,KC_MS_R,_______,_______,_______, \
+  _______,_______,_______,_______,_______,_______,KC_WH_L,KC_WH_R,_______,_______,_______,_______, \
+  _______,_______,_______,                _______,                        _______,_______,_______,_______ ),
+
 };
 
 enum function_id {
@@ -197,9 +220,9 @@ void action_function(keyrecord_t *record, uint8_t id, uint8_t opt) {
 
 [_AML] = KEYMAP_ANSI(
   _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,  \
-  _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______, \
   _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______, \
+  _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______, \
   _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______, \
-  _______,_______,_______,                _______,                        _______,_______,_______,_______ )
+  _______,_______,_______,                _______,                        _______,_______,_______,_______ ),
 
 */

@@ -10,24 +10,15 @@ Changes:
 
 TODO:
 
-*   Create Windows Layer
 *   Function Layer
     *   Healthesystems Username/Password
 *   Movement Layer
     *   VIM Up/Down/Left/Right - s
     *   VIM Skip word Left/Right - d
     *   VIM Home/End/PgUp/PgDn - f
-*   Create Mac Layer
-*   Function Layer
-    *   Healthesystems Username/Password
-*   Movement Layer
-    *   VIM Up/Down/Left/Right - s
-    *   VIM Skip word Left/Right - d
-    *   VIM Home/End/PgUp/PgDn - f
-        *   Make sure Home/End work on the same line instead of document
-*   Confirm MouseKeys works on both Windows and Mac
-*   Things to Include:
-    *   MouseKeys
+*   MouseKeys
+    *   Confirm MouseKeys works on both Windows and Mac
+    *   Configure MouseKeys (Initial Settings, Acceleration)
 
 ---
 
