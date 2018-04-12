@@ -19,6 +19,7 @@ TODO:
 *   MouseKeys
     *   Confirm MouseKeys works on both Windows and Mac
     *   Configure MouseKeys (Initial Settings, Acceleration)
+*   Mac - Move Space Left/Right
 
 ---
 
