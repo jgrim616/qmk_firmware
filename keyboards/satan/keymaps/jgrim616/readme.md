@@ -24,3 +24,18 @@ TODO:
 ---
 
 ![on_my_way.png](on_my_way.png)
+
+Notes:
+
+Default Backlighting:
+
+Fn + C V B:
+
+1.  Low Light Constant
+2.  Medium Light Constant
+3.  Bright Light Constant
+4.  Slow Pulse
+5.  Medium Pulse
+6.  Fast Pulse
+7.  Bright Light and as you type they fade
+8.  No Light and as you type they light up
