@@ -74,11 +74,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |-----------------------------------------------------------|
    * |   |_MBL2|_WBL2| |   |   |Cal|   |NxT|PvT|Prt|Scr|Pau|SLEEP|
    * |-----------------------------------------------------------|
-   * |      |   |   |Alt|AML|   |Lt |Dn |Up |Rt |   |   |        |
+   * |      |   |   |Alt|AML|   |Lt |Dn |Up |Rt |   |   |_AML    |
    * |-----------------------------------------------------------|
    * |        |   |DEL|BL-|BLT|BL+|Vo-|Vo+|Mut|   |   |          |
    * |-----------------------------------------------------------|
-   * |     |     |    |                      |_AML|    |_WBL|_MBL|
+   * |     |     |    |                      |    |    |_WBL|_MBL|
    * `-----------------------------------------------------------'
    */
     [_MFL] = KEYMAP_ANSI(
@@ -91,9 +91,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #else
         KC_GRV, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_DEL,
         _______, TO(_MBL2), TO(_WBL2), _______, _______, _______, KC_CALC, _______, NXT_TAB, PRV_TAB, KC_PSCR, KC_SLCK, KC_PAUS, KC_PWR,
-        _______, _______, _______, KC_LALT, MO(_AML), _______, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, _______, _______, _______,
+        _______, _______, _______, KC_LALT, MO(_AML), _______, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, _______, _______, TO(_AML),
         _______, _______, KC_BSPC, BL_DEC, BL_TOGG, BL_INC, KC_VOLD, KC_VOLU, KC_MUTE, _______, _______, _______,
-        _______, _______, _______, _______, TO(_AML), _______, TO(_WBL), TO(_MBL)),
+        _______, _______, _______, _______, _______, _______, TO(_WBL), TO(_MBL)),
 #endif
 
     /* Keymap _WFL: Windows Function Layer
@@ -102,11 +102,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |-----------------------------------------------------------|
    * |   |_MBL2|_WBL2| |   |   |Cal|   |NxT|PvT|Prt|Scr|Pau|SLEEP|
    * |-----------------------------------------------------------|
-   * |      |   |   |Ctr|AML|   |Lt |Dn |Up |Rt |Hme|PgU|        |
+   * |      |   |   |Ctr|AML|   |Lt |Dn |Up |Rt |Hme|PgU|_AML    |
    * |-----------------------------------------------------------|
    * |        |   |DEL|BL-|BLT|BL+|Vo-|Vo+|Mut|End|PgD|          |
    * |-----------------------------------------------------------|
-   * |     |     |    |                      |_AML|    |_WBL|_MBL|
+   * |     |     |    |                      |    |    |_WBL|_MBL|
    * `-----------------------------------------------------------'
    */
     [_WFL] = KEYMAP_ANSI(
@@ -119,9 +119,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #else
         KC_GRV, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_DEL,
         _______, TO(_MBL2), TO(_WBL2), _______, _______, _______, KC_CALC, _______, NXT_TAB, PRV_TAB, KC_PSCR, KC_SLCK, KC_PAUS, KC_SLEP,
-        _______, _______, _______, KC_LCTL, MO(_AML), _______, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_HOME, KC_PGUP, _______,
+        _______, _______, _______, KC_LCTL, MO(_AML), _______, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_HOME, KC_PGUP, TO(_AML),
         _______, _______, KC_BSPC, BL_DEC, BL_TOGG, BL_INC, KC_VOLD, KC_VOLU, KC_MUTE, KC_END, KC_PGDN, _______,
-        _______, _______, _______, _______, TO(_AML), _______, TO(_WBL), TO(_MBL)),
+        _______, _______, _______, _______, _______, _______, TO(_WBL), TO(_MBL)),
 #endif
 
     /* Keymap _AML: Additional Movement Layer
