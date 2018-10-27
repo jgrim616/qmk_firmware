@@ -91,4 +91,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
 
+ /*
+ * Behavior Configuration
+ */
+ #define IGNORE_MOD_TAP_INTERRUPT // makes it possible to do rolling combos (zx) with keys that convert to other keys on hold
+
 #endif
