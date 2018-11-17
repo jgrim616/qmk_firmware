@@ -1,9 +1,10 @@
 # Jim's Notes
-[Keyboard Editor](http://www.keyboard-layout-editor.com)
+## [Keyboard Editor](http://www.keyboard-layout-editor.com)
 * Log in with GitHub account
 
-[jgrim616_spacefn](https://github.com/jgrim616/qmk_firmware/blob/jgrim616/keyboards/satan/keymaps/jgrim616_spacefn)
-[jgrim616_original](https://github.com/jgrim616/qmk_firmware/tree/jgrim616/keyboards/satan/keymaps/jgrim616)
+## Keymaps
+* [jgrim616_spacefn](https://github.com/jgrim616/qmk_firmware/blob/jgrim616/keyboards/satan/keymaps/jgrim616_spacefn)
+* [jgrim616_original](https://github.com/jgrim616/qmk_firmware/tree/jgrim616/keyboards/satan/keymaps/jgrim616)
 
 
 
