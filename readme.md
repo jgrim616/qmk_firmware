@@ -1,5 +1,6 @@
 # Jim's Notes
-## [Keyboard Editor](http://www.keyboard-layout-editor.com)
+## Keyboard Editor
+* [Keyboard Editor](http://www.keyboard-layout-editor.com)
 * Log in with GitHub account
 
 ## Keymaps
