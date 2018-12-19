@@ -2,41 +2,43 @@
 
 This is the keymap used by [QMK Configurator](https://config.qmk.fm/#/1upkeyboards/1up60hse/LAYOUT_60_ansi) as default.  
 
-RGB Backlighting Modes
+------------
 
-1 - Solid color
-2 - Solid color Breathing - Slow
-3 - Solid color Breathing - Medium 1
-4 - Solid color Breathing - Medium 2
-5 - Solid color Breathing - Fast
-6 - Solid color, cycling through colors 
-7 -
-8 - 
-9 - 
-10 -
-11 -
-12 - 
-13 - 
-14 - 
-15 - 
-16 - 
-17 - 
-18 - 
-19 - 
-20 - 
-21 - 
-22 - 
-23 - 
-24 - 
-25 - 
-26 - 
-27 -
-28 -
-29 -
-30 - 
-31 - 
-32 - 
-33 - 
-34 - 
-35 - 
-36 - 
+### RGB Backlighting Modes
+
+1. Solid color
+2. Solid color Breathing - Slow
+3. Solid color Breathing - Medium 1
+4. Solid color Breathing - Medium 2
+5. Solid color Breathing - Fast
+6. Solid color, cycling through colors - Slow
+7. Solid color, cycling through colors - Medium
+8. Solid color, cycling through colors - Fast
+9. Rainbow, cycling through colors - Slow 1
+10. Rainbow, cycling through colors - Slow 2
+11. Rainbow, cycling through colors - Medium 1
+12. Rainbow, cycling through colors - Medium 2
+13. Rainbow, cycling through colors - Medium 3
+14. Rainbow, cycling through colors - Fast
+15. Single color chase around keyboard - clockwise - slow
+16. Single color chase around keyboard - counter-clockwise - slow
+17. Single color chase around keyboard - clockwise - medium
+18. Single color chase around keyboard - counter-clockwise - medium
+19. Single color chase around keyboard - clockwise - fast
+20. Single color chase around keyboard - counter-clockwise - fast
+21. Single color chase around keyboard - back and forth - slow
+22. Single color chase around keyboard - back and forth - medium
+23. Single color chase around keyboard - back and forth - fast
+24. Christmas colors alternating 
+25. Blue/Green in front, Purple/Yellow in back
+26. Green/Blue in front, Yellow/Purple in back
+27. Blue/Red in front, Blue/Purple in back 
+28. Green/Purple in front, Green/Red in back
+29. Blue/Purple in front, Blue/Purple in back
+30. Green/Yellow in front, Green/Yellow in back
+31. Blue/Purple in front, Purple in back
+32. Green/Yellow in front, Green in back
+33. Blue/Purple in front, Blue in back
+34. Blue/Green in front, Green in back
+35. Solid color cycle, quick changing
+36. Flashing left/righ solid color
