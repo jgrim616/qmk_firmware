@@ -7,38 +7,38 @@ This is the keymap used by [QMK Configurator](https://config.qmk.fm/#/1upkeyboar
 ### RGB Backlighting Modes
 
 1. Solid color
-2. Solid color Breathing - Slow
-3. Solid color Breathing - Medium 1
-4. Solid color Breathing - Medium 2
-5. Solid color Breathing - Fast
-6. Solid color, cycling through colors - Slow
-7. Solid color, cycling through colors - Medium
-8. Solid color, cycling through colors - Fast
-9. Rainbow, cycling through colors - Slow 1
-10. Rainbow, cycling through colors - Slow 2
-11. Rainbow, cycling through colors - Medium 1
-12. Rainbow, cycling through colors - Medium 2
-13. Rainbow, cycling through colors - Medium 3
-14. Rainbow, cycling through colors - Fast
-15. Single color chase around keyboard - clockwise - slow
-16. Single color chase around keyboard - counter-clockwise - slow
-17. Single color chase around keyboard - clockwise - medium
-18. Single color chase around keyboard - counter-clockwise - medium
-19. Single color chase around keyboard - clockwise - fast
-20. Single color chase around keyboard - counter-clockwise - fast
-21. Single color chase around keyboard - back and forth - slow
-22. Single color chase around keyboard - back and forth - medium
-23. Single color chase around keyboard - back and forth - fast
-24. Christmas colors alternating 
-25. Blue/Green in front, Purple/Yellow in back
-26. Green/Blue in front, Yellow/Purple in back
-27. Blue/Red in front, Blue/Purple in back 
-28. Green/Purple in front, Green/Red in back
-29. Blue/Purple in front, Blue/Purple in back
-30. Green/Yellow in front, Green/Yellow in back
-31. Blue/Purple in front, Purple in back
-32. Green/Yellow in front, Green in back
-33. Blue/Purple in front, Blue in back
-34. Blue/Green in front, Green in back
-35. Solid color cycle, quick changing
-36. Flashing left/righ solid color
+2. Breathing - Slow
+3. Breathing - Medium 1
+4. Breathing - Medium 2
+5. Breathing - Fast
+6. Rainbow Mood - Slow
+7. Rainbow Mood - Medium
+8. Rainbow Mood - Fast
+9. Rainbow Swirl - Slow 1
+10. Rainbow Swirl - Slow 2
+11. Rainbow Swirl - Medium 1
+12. Rainbow Swirl - Medium 2
+13. Rainbow Swirl - Medium 3
+14. Rainbow Swirl - Fast
+15. Snake - clockwise - slow
+16. Snake - counter-clockwise - slow
+17. Snake - clockwise - medium
+18. Snake - counter-clockwise - medium
+19. Snake - clockwise - fast
+20. Snake - counter-clockwise - fast
+21. Knight Rider - slow
+22. Knight Rider - medium
+23. Knight Rider - fast
+24. Christmas
+25. Static Gradient - Blue/Green in front, Purple/Yellow in back
+26. Static Gradient - Green/Blue in front, Yellow/Purple in back
+27. Static Gradient - Blue/Red in front, Blue/Purple in back 
+28. Static Gradient - Green/Purple in front, Green/Red in back
+29. Static Gradient - Blue/Purple in front, Blue/Purple in back
+30. Static Gradient - Green/Yellow in front, Green/Yellow in back
+31. Static Gradient - Blue/Purple in front, Purple in back
+32. Static Gradient - Green/Yellow in front, Green in back
+33. Static Gradient - Blue/Purple in front, Blue in back
+34. Static Gradient - Blue/Green in front, Green in back
+35. RGB Test
+36. Alternating - Flashing left/right solid color
