@@ -20,15 +20,15 @@ This is the keymap used by [QMK Configurator](https://config.qmk.fm/#/1upkeyboar
 12. Rainbow Swirl - Medium 2
 13. Rainbow Swirl - Medium 3
 14. Rainbow Swirl - Fast
-15. Snake - clockwise - slow
-16. Snake - counter-clockwise - slow
-17. Snake - clockwise - medium
-18. Snake - counter-clockwise - medium
-19. Snake - clockwise - fast
-20. Snake - counter-clockwise - fast
-21. Knight Rider - slow
-22. Knight Rider - medium
-23. Knight Rider - fast
+15. Snake - clockwise - Slow
+16. Snake - counter-clockwise - Slow
+17. Snake - clockwise - Medium
+18. Snake - counter-clockwise - Medium
+19. Snake - clockwise - Fast
+20. Snake - counter-clockwise - Fast
+21. Knight Rider - Slow
+22. Knight Rider - Medium
+23. Knight Rider - Fast
 24. Christmas
 25. Static Gradient - Blue/Green in front, Purple/Yellow in back
 26. Static Gradient - Green/Blue in front, Yellow/Purple in back
