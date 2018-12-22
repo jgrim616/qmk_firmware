@@ -18,3 +18,10 @@
 #pragma once
 
 // place overrides here
+#define TAPPING_TOGGLE 2
+
+// Trying these 2 out to try to fix the problem I am having typing "cd " and "git"...
+//    both would not type and would use the MOD_TAP function instead...
+//    After testing this out, this seems to be working... will commit for now
+#define PERMISSIVE_HOLD
+#define IGNORE_MOD_TAP_INTERRUPT
