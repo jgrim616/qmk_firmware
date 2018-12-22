@@ -26,6 +26,14 @@
 // 12
 // 8
 
+enum custom_keycodes {
+  M_EMAIL = SAFE_RANGE,
+  M_USER,
+  M_PASS1,
+  M_PASS2,
+};
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_60_ansi(
     KC_ESC,      KC_1,          KC_2,        KC_3,              KC_4,              KC_5,                  KC_6,           KC_7,                  KC_8,    KC_9,     KC_0,    KC_MINS,            KC_EQL,  KC_BSPC,
@@ -44,7 +52,51 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [2] = LAYOUT_60_ansi(
     _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______,               _______, _______,  _______, _______,            _______, RESET,
     BL_TOGG,     BL_INC,       BL_DEC,       BL_STEP,          _______,          _______,                 _______,        _______,               _______, KC_MSTP,  KC_MPLY, KC_MRWD,            KC_MFFD, _______,
-    RGB_TOG,     RGB_MOD,      RGB_HUI,      RGB_SAI,          RGB_VAI,          RGB_SPI,                 RGB_M_P,        RGB_M_B,               RGB_M_R, RGB_M_SW, _______, _______,           _______,
+    RGB_TOG,     RGB_MOD,      RGB_HUI,      RGB_SAI,          RGB_VAI,          RGB_SPI,                 RGB_M_P,        RGB_M_B,               RGB_M_R, RGB_M_SW, _______, _______,            _______,
     _______,     RGB_RMOD,     RGB_HUD,      RGB_SAD,          RGB_VAD,          RGB_SPD,                 RGB_M_SN,       RGB_M_K,               RGB_M_X, RGB_M_G,  _______, _______,
-    KC_MUTE,     KC_VOLD,      KC_VOLU,      _______,          _______,          _______,                 _______,        _______),
+    KC_MUTE,     KC_VOLD,      KC_VOLU,      _______,          _______,          MO(3),                   _______,        _______),
+
+  [3] = LAYOUT_60_ansi(
+    _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______,               _______, _______, _______, _______,             _______, _______,
+    _______,     _______,      _______,      M_EMAIL,          _______,          _______,                 _______,        M_USER,                _______, _______, M_PASS1, M_PASS2,             _______, _______,
+    _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______,               _______, _______, _______, _______,             _______,
+    _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______,               _______, _______, _______, _______,
+    _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______),
+
+};
+
+/*
+  [X] = LAYOUT_60_ansi(
+    _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______,               _______, _______, _______, _______,             _______, _______,
+    _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______,               _______, _______, _______, _______,             _______, _______,
+    _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______,               _______, _______, _______, _______,             _______,
+    _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______,               _______, _______, _______, _______,
+    _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______),
+*/
+
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case M_EMAIL:
+      if (record->event.pressed) {
+        SEND_STRING("jgrimaldi@healthesystems.com");
+      }
+      break;
+    case M_USER:
+      if (record->event.pressed) {
+        SEND_STRING("jgrimaldi");
+      }
+      break;
+    case M_PASS1:
+      if (record->event.pressed) {
+        SEND_STRING("Giant$123");
+      }
+      break;
+    case M_PASS2:
+      if (record->event.pressed) {
+        SEND_STRING("Pumpkin2!");
+      }
+      break;
+  }
+  return true;
 };
