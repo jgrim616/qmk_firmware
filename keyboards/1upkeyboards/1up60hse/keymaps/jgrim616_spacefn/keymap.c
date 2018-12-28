@@ -20,9 +20,10 @@
 #define _______ KC_TRNS
 #define _DEFAULT 0
 #define _GAMING 1
-#define _MOVEMENT 2
-#define _FUNCTION 3
-#define _MACROS 4
+#define _DEFAULT_MOVEMENT 2
+#define _DEFAULT_FUNCTION 3
+#define _DEFAULT_MACROS 4
+#define _GAMING_MOVEMENT 5
 
 // Keyboard Layout
 // 14
@@ -54,10 +55,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC, KC_BSLS,
     KC_CAPS, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_ENT,
     KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
-    KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_RALT, KC_RGUI, MO(3), KC_LCTL),
+    KC_LCTL, KC_LGUI, KC_LALT, LT(5, KC_SPC), KC_RALT, KC_RGUI, MO(3), KC_LCTL),
 
   // Layer 2 - Green RGB (WASD Green on Keyboard Editor)
-  [_MOVEMENT] = LAYOUT_60_ansi(
+  [_DEFAULT_MOVEMENT] = LAYOUT_60_ansi(
     KC_GRV,      KC_F1,        KC_F2,        KC_F3,            KC_F4,            KC_F5,                   KC_F6,          KC_F7,                 KC_F8,   KC_F9,    KC_F10,  KC_F11,             KC_F12,  KC_DEL,
     _______,     _______,      _______,      KC_ENT,           _______,          _______,                 _______,        KC_HOME,               KC_UP,   KC_END,   _______, _______,            _______, _______,
     _______,     _______,      _______,      _______,          _______,          _______,                 KC_NO,          KC_LEFT,               KC_DOWN, KC_RGHT,  _______, _______,            _______,
@@ -65,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______),
 
   // Layer 3 - White RGB (WASD White on Keyboard Editor)
-  [_FUNCTION] = LAYOUT_60_ansi(
+  [_DEFAULT_FUNCTION] = LAYOUT_60_ansi(
     _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______,               _______, _______,  _______, _______,            _______, RESET,
     BL_TOGG,     BL_INC,       BL_DEC,       BL_STEP,          _______,          _______,                 _______,        _______,               _______, KC_MSTP,  KC_MPLY, KC_MRWD,            KC_MFFD, TG(1),
     RGB_TOG,     RGB_MOD,      RGB_HUI,      RGB_SAI,          RGB_VAI,          RGB_SPI,                 RGB_M_P,        RGB_M_B,               RGB_M_R, RGB_M_SW, _______, _______,            _______,
@@ -73,11 +74,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_MUTE,     KC_VOLD,      KC_VOLU,      _______,          _______,          MO(4),                   _______,        _______),
 
   // Layer 4 - Red RGB (WASD Red on Keyboard Editor)
-  [_MACROS] = LAYOUT_60_ansi(
+  [_DEFAULT_MACROS] = LAYOUT_60_ansi(
     _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______,               _______, _______, _______, _______,             _______, _______,
     _______,     _______,      _______,      M_EMAIL,          _______,          _______,                 _______,        M_USER,                _______, _______, M_PASS1, M_PASS2,             _______, _______,
     _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______,               _______, _______, _______, _______,             _______,
     _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______,               _______, _______, _______, _______,
+    _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______),
+
+// Layer 5 - Hot Pink RGB (WASD Pink on Keyboard Editor)
+  [_GAMING_MOVEMENT] = LAYOUT_60_ansi(
+    KC_GRV,      KC_F1,        KC_F2,        KC_F3,            KC_F4,            KC_F5,                   KC_F6,          KC_F7,                 KC_F8,   KC_F9,   KC_F10,  KC_F11,             KC_F12,  KC_DEL,
+    _______,     _______,      _______,      _______,          _______,          _______,                 _______,        KC_HOME,               KC_UP,   KC_END,  _______, _______,             _______, _______,
+    _______,     _______,      _______,      _______,          _______,          _______,                 _______,        KC_LEFT,               KC_DOWN, KC_RGHT, _______, _______,             _______,
+    _______,     _______,      _______,      _______,          _______,          KC_SPC,                  _______,        _______,               KC_PGUP, KC_PGDN, _______, _______,
     _______,     _______,      _______,      _______,          _______,          _______,                 _______,        _______),
 
 };
@@ -121,17 +130,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 uint32_t layer_state_set_user(uint32_t state) {
     switch (biton32(state)) {
-    case _MOVEMENT:
+    case _DEFAULT_MOVEMENT:
         rgblight_sethsv_green();
         break;
-    case _FUNCTION:
+    case _DEFAULT_FUNCTION:
         rgblight_sethsv_white();
         break;
-    case _MACROS:
+    case _DEFAULT_MACROS:
         rgblight_sethsv_red();
         break;
     case _GAMING:
         rgblight_sethsv_blue();
+        break;
+    case _GAMING_MOVEMENT:
+        rgblight_sethsv (328, 255, 255); // hot pink
         break;
     default: //  for any other layers, or the default layer
         rgblight_sethsv_cyan();
