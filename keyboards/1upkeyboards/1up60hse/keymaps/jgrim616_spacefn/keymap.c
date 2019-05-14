@@ -115,7 +115,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
     case M_PASS1:
       if (record->event.pressed) {
-        SEND_STRING("GGiant$123");
+        SEND_STRING("GGiant$$123");
       }
       break;
     case M_PASS2:
