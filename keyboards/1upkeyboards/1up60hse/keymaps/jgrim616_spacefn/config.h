@@ -19,7 +19,7 @@
 
 // place overrides here
 #define TAPPING_TOGGLE 2
-#define TAPPING_TERM 150
+#define TAPPING_TERM 250
 
 // Trying these 2 out to try to fix the problem I am having typing "cd " and "git"...
 //    both would not type and would use the MOD_TAP function instead...
