@@ -39,6 +39,7 @@ enum custom_keycodes
   M_USER,
   M_PASS1,
   M_PASS2,
+  M_PHONE
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -76,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Layer 4 - Red RGB (WASD Red on Keyboard Editor)
     [_DEFAULT_MACROS] = LAYOUT_60_ansi(
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, M_PHONE, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, M_EMAIL, _______, _______, _______, M_USER, _______, _______, M_PASS1, M_PASS2, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
@@ -135,6 +136,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
     if (record->event.pressed)
     {
       SEND_STRING("Pumpkin2!");
+    }
+    break;
+  case M_PHONE:
+    if (record->event.pressed)
+    {
+      SEND_STRING("8133601396");
     }
     break;
   }
