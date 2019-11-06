@@ -22,6 +22,8 @@ enum custom_keycodes
   M_PASS1,
   M_PASS2,
   M_PASS3,
+  M_PASS4,
+  M_PHONE
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -55,8 +57,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Layer 3
 [_DEFAULT_FUNCTION] = LAYOUT_tkl(\
     _______,                   _______, _______, _______, _______, KC_MPLY, KC_MSTP, KC_MRWD, KC_MFFD, _______, KC_MUTE, KC_VOLD, KC_VOLU,       _______, _______, _______, \
-    _______,          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,       _______, _______, _______, \
-    _______,          _______, _______, M_EMAIL, _______, _______, _______, M_USER,  _______, M_PASS1, M_PASS2, M_PASS3, _______, TG(1),         _______, _______, _______, \
+    _______,          _______, _______, M_PHONE, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,       _______, _______, _______, \
+    _______,          _______, _______, M_EMAIL, _______, _______, _______, M_USER,  _______, M_PASS1, M_PASS2, M_PASS3, M_PASS4, TG(1),         _______, _______, _______, \
     _______,          _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______, \
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,      _______,                             _______, \
     _______,          _______, _______,                _______,                                       _______, _______, _______,  _______,       _______, _______, _______  ),
@@ -97,13 +99,24 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
   case M_PASS2:
     if (record->event.pressed)
     {
-      SEND_STRING("GGiant$$1234");
+      SEND_STRING("GGiant!!1234");
     }
     break;
   case M_PASS3:
     if (record->event.pressed)
     {
       SEND_STRING("Pumpkin2!");
+    }
+    break;
+  case M_PASS4:
+    if (record->event.pressed)
+    {
+      SEND_STRING("Football17!");
+    }
+  case M_PHONE:
+    if (record->event.pressed)
+    {
+      SEND_STRING("8133601396");
     }
     break;
   }
