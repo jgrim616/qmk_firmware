@@ -39,6 +39,7 @@ enum custom_keycodes
   M_USER,
   M_PASS1,
   M_PASS2,
+  M_PASS3,
   M_PHONE
 };
 
@@ -78,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Layer 4 - Red RGB (WASD Red on Keyboard Editor)
     [_DEFAULT_MACROS] = LAYOUT_60_ansi(
         _______, _______, _______, M_PHONE, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, M_EMAIL, _______, _______, _______, M_USER, _______, _______, M_PASS1, M_PASS2, _______, _______,
+        _______, _______, _______, M_EMAIL, _______, _______, _______, M_USER,  _______, _______, M_PASS1, M_PASS2, M_PASS3, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______),
@@ -93,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Layer 6 - Orange RGB (WASD Orange on Keyboard Editor)
     [_RESET] = LAYOUT_60_ansi(
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RESET,
+        _______, M_PASS1, M_PASS2, M_PASS3, M_USER,  _______, _______, _______, _______, _______, _______, _______, _______, RESET,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
@@ -129,7 +130,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
   case M_PASS1:
     if (record->event.pressed)
     {
-      SEND_STRING("GGiant$$1234");
+      SEND_STRING("GGiant!!1234");
     }
     break;
   case M_PASS2:
@@ -138,6 +139,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
       SEND_STRING("Pumpkin2!");
     }
     break;
+  case M_PASS3:
+      if (record->event.pressed)
+      {
+        SEND_STRING("Football17!");
+      }
+      break;
   case M_PHONE:
     if (record->event.pressed)
     {
